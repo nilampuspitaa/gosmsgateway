@@ -1,0 +1,96 @@
+ul.sidebar-menu(data-widget='tree')
+  li.header MAIN SIDEBAR
+  li
+    a(href='/home')
+      i.fa.fa-home
+      span Home
+  li.treeview
+    a(href='#')
+      i.fa.fa-envelope
+      span SMS
+      span.pull-right-container
+        i.fa.fa-angle-left.pull-right
+    ul.treeview-menu
+      li
+        a(href='/sms/outbox')
+          |  Outbox
+      li
+        a(href='/sms/queue')
+          |  Queue
+      li
+        a(href='/sms/schedule')
+          |  Schedule
+  li.treeview
+    a(href='#')
+      i.fa.fa-envelope-o
+      span Send Message
+      span.pull-right-container
+        i.fa.fa-angle-left.pull-right
+    ul.treeview-menu
+      li
+        a(href='/send/smstext')
+          |  SMS Text
+      li
+        a(href='/send/smstemplate')
+          |  SMS Templates
+      li
+        a(href='/send/smsbroadcast')
+          |  SMS Broadcast
+  li.treeview
+    a(href='#')
+      i.fa.fa-address-book
+      span Phonebook
+      span.pull-right-container
+        i.fa.fa-angle-left.pull-right
+    ul.treeview-menu
+      li
+        a(href='/phonebook/phonebook')
+          |  Phonebox
+      li
+        a(href='/phonebook/addphonebook')
+          |  Add New Phonebook
+  li.treeview
+    a(href='#')
+      i.fa.fa-users
+      span Group
+      span.pull-right-container
+        i.fa.fa-angle-left.pull-right
+    ul.treeview-menu
+      li
+        a(href='/group/group')
+          |  Group
+      li
+        a(href='/group/addgroup')
+          |  Add New Group
+      li
+        a(href='/group/addphonegroup')
+          |  Add Phonebook to Group
+      li
+        a(href='/group/upload')
+          |  Upload to Group
+  li.treeview
+    a(href='#')
+      i.fa.fa-cogs
+      span Setting
+      span.pull-right-container
+        i.fa.fa-angle-left.pull-right
+    ul.treeview-menu
+      li
+        a(href='/setting/changepassword')
+          |  Change Password
+      li
+        a(href='/setting/template')
+          |  Templates
+      li
+        a(href='/setting/report')
+          |  Report
+      li
+        a(href='/setting/newinbox')
+          |  Inbox New First
+      li
+        a(href='/setting/oldinbox')
+          |  Inbox Old First
+  li
+    a(href='#')
+      i.fa.fa-sign-out
+      span Logout

@@ -1,0 +1,149 @@
+html
+  head
+    title Mahasiswa
+    link(rel='icon', href='/adminlte/img/icon_dasar.ico', type='image/x-icon')
+    meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no', name='viewport')
+    link(rel='stylesheet', href='/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.css')
+    link(rel='stylesheet', href='/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')
+    link(rel='stylesheet', href='/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')
+    link(rel='stylesheet', href='/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')
+    link(rel='stylesheet', href='/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/adminlte/bower_components/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/adminlte/bower_components/Ionicons/css/ionicons.min.css')
+    link(rel='stylesheet', href='/adminlte/bower_components/jvectormap/jquery-jvectormap.css')
+    link(rel='stylesheet', href='/adminlte/dist/css/AdminLTE.min.css')
+    link(rel='stylesheet', href='/adminlte/dist/css/skins/_all-skins.min.css')
+    script(type='text/javascript', src='/adminlte/bower_components/jquery/dist/jquery.min.js')
+    script(type='text/javascript', src='/adminlte/bower_components/jquery/dist/jquery.min.js')
+    script(src='/adminlte/bower_components/jquery//adminlte/ajax/script.js')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic')  
+  
+  body.hold-transition.skin-blue.sidebar-mini
+    .wrapper
+      header.main-header
+        a.logo(href='?tampil=beranda')
+          span.logo-mini
+            b SMS
+          span.logo-lg
+            i.fa.fa-send   
+            | GO 
+            b | SMS Gateway
+        nav.navbar.navbar-static-top
+          a.sidebar-toggle(href='#', data-toggle='push-menu', role='button')
+            span.sr-only Toggle navigation
+          .navbar-custom-menu
+      aside.main-sidebar
+        section.sidebar
+          include ./sidebar.jade
+      .content-wrapper
+        section.content-header
+            h1
+                | Report
+                small 
+                    a(href='#')
+                        | Setting
+                    | / Report
+            ol.breadcrumb
+                li
+                a(href='index.php')
+                    i.fa.fa-dashboard
+                    |  Home  
+                li.active Dashboard
+        section.content
+          .row
+            .col-xs-12
+                .box
+                    .box-header.with-border
+                        .nav-tabs-custom
+                            ul.nav.nav-tabs
+                                li.active
+                                    a(href='#tab_1', data-toggle='tab') Report SMS
+                            .tab-content
+                                #tab_1.tab-pane.active
+                                    form(role='form')
+                                        .box-body
+                                            .form-group
+                                                label Message
+                                                select.form-control
+                                                    option 
+                                            .form-group
+                                                label Start Date
+                                                .input-group
+                                                    .input-group-addon
+                                                        i.fa.fa-calendar
+                                                    input#datepicker.form-control.pull-right(type='text')
+                                            .form-group
+                                                label End Date
+                                                .input-group
+                                                    .input-group-addon
+                                                        i.fa.fa-calendar
+                                                    input#datepicker1.form-control.pull-right(type='text')
+                                        .box-footer
+                                            button.btn.btn-primary(type='submit') Submit
+                                 
+
+      footer.main-footer
+        strong
+          | Copyright © 
+          a(href='https://adminlte.io') Admin LTE
+          | .
+        |  Lab Komputer Dasar
+      .control-sidebar-bg
+
+    script(src='/adminlte/bower_components/jquery/dist/jquery.min.js')
+    script(src='/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')
+
+    script(src='/adminlte/bower_components/bootstrap/dist/js/konfirmasi.js')
+    script(src='/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js')
+    script(src='/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')
+    script(src='/adminlte/bower_components/fastclick/lib/fastclick.js')
+    script(src='/adminlte/dist/js/adminlte.min.js')
+    script(src='/adminlte/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js')
+    script(src='/adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')
+    script(src='/adminlte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')
+    script(src='/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js')
+    script(src='/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')
+    script(src='/adminlte/bower_components/Chart.js/Chart.js')
+    script(src='/adminlte/bower_components/select2/dist/js/select2.full.min.js')
+    script(src='/adminlte/plugins/input-mask/jquery.inputmask.js')
+    script(src='/adminlte/plugins/input-mask/jquery.inputmask.date.extensions.js')
+    script(src='/adminlte/plugins/input-mask/jquery.inputmask.extensions.js')
+    script(src='/adminlte/bower_components/moment/min/moment.min.js')
+    script(src='/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.js')
+    script(src='/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')
+    script(src='/adminlte/dist/js/pages/dashboard2.js')
+    script(src='/adminlte/dist/js/demo.js')
+    script.
+      $(function () {
+      $('#example1').DataTable()
+      $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true
+      })
+      })
+    script.
+      $('[data-mask]').inputmask()
+      $(function () {
+      $('.select2').select2()
+      $('#reservation').daterangepicker()
+      $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'YYYY/MM/DD h:mm A' })
+      $('#datepicker').datepicker({
+      autoclose: true
+      })
+      $('#datepicker1').datepicker({
+      autoclose: true
+      })
+      })
+    script.
+      $('#datepicker').datepicker({
+        autoclose: true
+      })
+    script.
+      $('#datepicker1').datepicker({
+        autoclose: true
+      })
