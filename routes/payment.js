@@ -1,7 +1,6 @@
 var request = require('request');
 
 var base64 = require('base-64');
-var bodyParser = require('body-parser'); 
 var express = require('express');
 var router = express.Router();
 
@@ -157,7 +156,7 @@ router.get('/cancel/:id', function(req, res, next){
 });
 
 router.post('/handler', function(req, res, next){
-    // console.log(req.body);
+    console.log(req.body);
     res.json({result : 'ok'});
 });
 
@@ -191,7 +190,6 @@ function post(path, header, data, callback){
         json: data
     };
     request(options, function (error, response, body) {
-        // var output = JSON.parse(body);
         callback(body);
     })
 }
