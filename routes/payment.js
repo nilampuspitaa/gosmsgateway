@@ -157,7 +157,8 @@ router.get('/cancel/:id', function(req, res, next){
 });
 
 router.post('/handler', function(req, res, next){
-    res.send(req.body);
+    console.log(req.body);
+    res.send("wew");
 });
 
 
