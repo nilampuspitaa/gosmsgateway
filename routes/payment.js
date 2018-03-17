@@ -3,6 +3,7 @@ var request = require('request');
 var base64 = require('base-64');
 var bodyParser = require('body-parser'); 
 var express = require('express');
+var bodyParserJsonError = require('express-body-parser-json-error');
 var router = express.Router();
 
 var db = require("../config/database"); //deklarasi database dari file database.js
@@ -11,6 +12,8 @@ var db = require("../config/database"); //deklarasi database dari file database.
 // router.get('/', function(req, res, next) {
 //   res.render('group');
 // });
+
+router.use(bodyParserJsonError());
 
 router.get('/token', function(req, res, next) {
     var kirim1 = {
@@ -158,7 +161,7 @@ router.get('/cancel/:id', function(req, res, next){
 
 router.post('/handler', function(req, res, next){
     // console.log(req.body);
-    res.send("wew");
+    res.json({result : 'ok'});
 });
 
 
