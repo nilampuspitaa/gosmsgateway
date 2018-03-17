@@ -41,8 +41,6 @@ router.get('/charge/permata', function(req, res, next) {
     })
 });
 
-
-
 router.get('/charge/bca', function(req,res,next){
     var kirim1 = {
         "payment_type": "bank_transfer",
@@ -150,11 +148,16 @@ router.get('/charge/bni', function(req, res, next){
         res.send(hasil);
     })
 });
+
 router.get('/cancel/:id', function(req, res, next){
     var kirim1 = {};
     post(req.params.id+'/cancel', headers, kirim1, (hasil) => {
         res.send(hasil);
     })
+});
+
+router.post('/handler', function(req, res, next){
+    res.send(req.body);
 });
 
 
