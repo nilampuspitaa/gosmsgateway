@@ -12,8 +12,8 @@ var db = require("../config/database"); //deklarasi database dari file database.
 // });
 
 router.post('/handler', function(req, res, next) {
-    console.log(req.body);
-    res.send(req.body);
+    var parsedData = JSON.parse(JSON.parse(req.body));
+    res.send(JSON.stringify(parsedData));
 });
 
 router.get('/token', function(req, res, next) {

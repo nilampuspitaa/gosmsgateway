@@ -5,7 +5,6 @@ var favicon = require('serve-favicon'); //untuk icon di
 var logger = require('morgan'); //mencatat error
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser'); //memindahkan data untuk method GET dan POST
-var bodyParserJsonError = require('express-body-parser-json-error');
 
 var index = require('./routes/index'); //routing untuk indeks.. kalo mau tambah routing tinggal copy dan ganti nama filenya
 var home = require('./routes/home'); 
@@ -38,11 +37,11 @@ app.set('view engine', 'jade'); //frontend nya itu pake jade --> html2jade.org
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(cors());
 app.use(logger('dev'));
-// app.use(bodyParser.json());
+// app.use(bodyParser.raw());
+app.use(bodyParser.text({type: '*/*'}));
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); //folder untuk template(style)
-app.use(bodyParserJsonError());
 
 app.use('/', index); //cara pemanggilan di url browser
 app.use('/home', home);
