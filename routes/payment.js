@@ -1,7 +1,6 @@
 var request = require('request');
 
 var base64 = require('base-64');
-var bodyParser = require('body-parser'); 
 var express = require('express');
 var router = express.Router();
 
@@ -11,6 +10,10 @@ var db = require("../config/database"); //deklarasi database dari file database.
 // router.get('/', function(req, res, next) {
 //   res.render('group');
 // });
+
+router.post('/handler', function(req, res, next) {
+    res.send(req.body);
+});
 
 router.get('/token', function(req, res, next) {
     var kirim1 = {
