@@ -12,6 +12,7 @@ var db = require("../config/database"); //deklarasi database dari file database.
 // });
 
 router.post('/handler', function(req, res, next) {
+    console.log(req.body);
     res.send(req.body);
 });
 
@@ -43,6 +44,8 @@ router.get('/charge/permata', function(req, res, next) {
         res.send(hasil);
     })
 });
+
+
 
 router.get('/charge/bca', function(req,res,next){
     var kirim1 = {
@@ -151,17 +154,11 @@ router.get('/charge/bni', function(req, res, next){
         res.send(hasil);
     })
 });
-
 router.get('/cancel/:id', function(req, res, next){
     var kirim1 = {};
     post(req.params.id+'/cancel', headers, kirim1, (hasil) => {
         res.send(hasil);
     })
-});
-
-router.post('/handler', function(req, res, next){
-    console.log(req.body);
-    res.json({result : 'ok'});
 });
 
 
@@ -194,6 +191,7 @@ function post(path, header, data, callback){
         json: data
     };
     request(options, function (error, response, body) {
+        // var output = JSON.parse(body);
         callback(body);
     })
 }
