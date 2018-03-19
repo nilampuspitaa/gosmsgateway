@@ -11,7 +11,10 @@ var db = require("../config/database"); //deklarasi database dari file database.
 //   res.render('group');
 // });
 
+
 router.post('/handler', function(req, res, next) {
+    var parsedData = JSON.parse(JSON.parse(req.body));
+    res.send(JSON.stringify(parsedData));
     console.log(req.body);
     res.send(req.body);
 });
