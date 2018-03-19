@@ -86,7 +86,7 @@ router.get('/charge/mandiri', function(req, res, next){
     var kirim1 = {
         "payment_type": "echannel",
         "transaction_details": {
-            "order_id": "H17557",
+            "order_id": "H17570",
             "gross_amount": 95000
             },
         "item_details": [
