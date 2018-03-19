@@ -52,7 +52,7 @@ router.get('/charge/bca', function(req,res,next){
         "payment_type": "bank_transfer",
         "transaction_details": {
             "gross_amount": 50000,
-            "order_id": "H17560"
+            "order_id": "H17561"
         },
         "customer_details": {
             "email": "dyah1431062@sttpln.ac.id",
