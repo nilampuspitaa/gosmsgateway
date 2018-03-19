@@ -12,9 +12,8 @@ var db = require("../config/database"); //deklarasi database dari file database.
 // });
 
 router.post('/handler', function(req, res, next) {
-    // var parsedData = JSON.parse(JSON.parse(req.body));
     console.log(req.body);
-    res.send("wew");
+    res.send(req.body);
 });
 
 router.get('/token', function(req, res, next) {
@@ -53,7 +52,7 @@ router.get('/charge/bca', function(req,res,next){
         "payment_type": "bank_transfer",
         "transaction_details": {
             "gross_amount": 50000,
-            "order_id": "H17555"
+            "order_id": "H17560"
         },
         "customer_details": {
             "email": "dyah1431062@sttpln.ac.id",
