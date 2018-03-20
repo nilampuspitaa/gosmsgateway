@@ -13,8 +13,6 @@ var db = require("../config/database"); //deklarasi database dari file database.
 
 
 router.post('/handler', function(req, res, next) {
-    var parsedData = JSON.parse(JSON.parse(req.body));
-    res.send(JSON.stringify(parsedData));
     console.log(req.body);
     res.send(req.body);
 });
@@ -39,7 +37,7 @@ router.get('/charge/permata', function(req, res, next) {
           }
         },
         "transaction_details": {
-          "order_id": "H17554",
+          "order_id": "H17500",
           "gross_amount": 100000
         }
       }
@@ -55,7 +53,7 @@ router.get('/charge/bca', function(req,res,next){
         "payment_type": "bank_transfer",
         "transaction_details": {
             "gross_amount": 50000,
-            "order_id": "H17561"
+            "order_id": "H17501"
         },
         "customer_details": {
             "email": "dyah1431062@sttpln.ac.id",
