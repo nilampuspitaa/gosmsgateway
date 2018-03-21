@@ -53,7 +53,7 @@ router.get('/charge/bca', function(req,res,next){
         "payment_type": "bank_transfer",
         "transaction_details": {
             "gross_amount": 50000,
-            "order_id": "H17501"
+            "order_id": "H17600"
         },
         "customer_details": {
             "email": "dyah1431062@sttpln.ac.id",
@@ -84,7 +84,7 @@ router.get('/charge/mandiri', function(req, res, next){
     var kirim1 = {
         "payment_type": "echannel",
         "transaction_details": {
-            "order_id": "H17570",
+            "order_id": "H17700",
             "gross_amount": 95000
             },
         "item_details": [
@@ -122,7 +122,7 @@ router.get('/charge/bni', function(req, res, next){
         "payment_type": "bank_transfer",
         "transaction_details": {
             "gross_amount": 10000,
-            "order_id": "H17558"
+            "order_id": "H17800"
         },
         "customer_details": {
             "email": "dyah1431062@sttpln.ac.id",
