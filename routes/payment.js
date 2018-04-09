@@ -36,8 +36,14 @@ router.get('/charge/permata', function(req, res, next) {
             "recipient_name": "PT. PLN (Persero)"
           }
         },
+        "customer_details": {
+            "email": "dyah1431062@sttpln.ac.id",
+            "first_name": "nilam",
+            "last_name": "puspita",
+            "phone": "+6285 946 350 992"
+        },
         "transaction_details": {
-          "order_id": "H17500",
+          "order_id": "H17705",
           "gross_amount": 100000
         }
       }
@@ -53,7 +59,7 @@ router.get('/charge/bca', function(req,res,next){
         "payment_type": "bank_transfer",
         "transaction_details": {
             "gross_amount": 50000,
-            "order_id": "H17600"
+            "order_id": "H17706"
         },
         "customer_details": {
             "email": "dyah1431062@sttpln.ac.id",
@@ -84,7 +90,7 @@ router.get('/charge/mandiri', function(req, res, next){
     var kirim1 = {
         "payment_type": "echannel",
         "transaction_details": {
-            "order_id": "H17700",
+            "order_id": "H17707",
             "gross_amount": 95000
             },
         "item_details": [
@@ -122,7 +128,7 @@ router.get('/charge/bni', function(req, res, next){
         "payment_type": "bank_transfer",
         "transaction_details": {
             "gross_amount": 10000,
-            "order_id": "H17800"
+            "order_id": "H17708"
         },
         "customer_details": {
             "email": "dyah1431062@sttpln.ac.id",
